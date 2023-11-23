@@ -142,9 +142,9 @@ function ShowPage({ movieList, setRating, switchColors }) {
                 </div>
                 <p className="content__date">{format(new Date(card.release_date || null), 'MMMM dd, yyyy')}</p>
                 <div className="content__genres">
-                  {genres.genres.map((genre, b = 1) => {
-                    return card.genre_ids.includes(genre.id) && <Tag key={(b += b)}>{genre.name}</Tag>
-                  })}
+                  {genres.genres.map(
+                    (genre, b = 1) => card.genre_ids.includes(genre.id) && <Tag key={(b += b)}>{genre.name}</Tag>
+                  )}
                 </div>
                 <p className="content__overview">{textTruncate(card.overview, 180, '...')}</p>
                 <Rate count={10} onChange={(rating) => setRating(rating, card.id)} defaultValue={card.rating} />

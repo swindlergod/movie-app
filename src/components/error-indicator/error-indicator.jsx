@@ -1,9 +1,11 @@
 import './error-indicator.css'
-import pic from './repair.jpg'
+
 import React from 'react'
 import { Alert, Space } from 'antd'
 
-const ErrorComponent = () => {
+import pic from './repair.jpg'
+
+function ErrorComponent() {
   return (
     <div className="error-component">
       <img src={pic} alt="repair" />

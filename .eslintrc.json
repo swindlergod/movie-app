@@ -39,6 +39,7 @@
     "class-methods-use-this": "off",
     "no-unused-expressions": "off",
     "react/prefer-stateless-function": "off",
+    "no-return-assign":"off",
     "react/prop-types": 0,
     "import/no-unresolved": [2, { "caseSensitive": false }],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
