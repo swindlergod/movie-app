@@ -1,0 +1,17 @@
+.searchbar {
+  display: block;
+  padding: 9px 12px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 34px;
+  width: 938px;
+  height: 40px;
+  font-family: Inter;
+  font-size: 16px;
+}
+
+@media (max-width: 1010px) {
+  .searchbar {
+    width: 387px;
+  }
+}

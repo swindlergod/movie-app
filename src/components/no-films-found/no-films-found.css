@@ -1,0 +1,9 @@
+.nothingFound {
+  font-size: large;
+  color: cornflowerblue;
+  border: 1px solid cornflowerblue;
+  width: 550px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}

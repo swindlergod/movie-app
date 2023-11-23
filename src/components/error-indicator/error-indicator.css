@@ -1,0 +1,19 @@
+.error-component {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: tomato;
+}
+
+.error-component img {
+  max-width: 200px;
+  align-self: center;
+}
+
+.ant-alert-content {
+  font-size: 22px;
+}
+
+.ant-alert-content .ant-alert-message {
+  font-size: 25px;
+}

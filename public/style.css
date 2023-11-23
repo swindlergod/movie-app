@@ -1,0 +1,22 @@
+.root{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,*::after,*::before {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width: 1010px) {
+    .root{
+        display: flex;
+        flex-direction: column;
+    }
+}
