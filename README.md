@@ -1,1 +1,1 @@
-https://movie-lzcbecv1q-swindlers-projects.vercel.app/
+movie-rust-xi.vercel.app
