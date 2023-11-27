@@ -124,8 +124,8 @@ function ShowPage({ movieList, setRating, switchColors }) {
     <GenresConsumer>
       {(genres) => (
         <div className="cardsList">
-          {movieList.map((card, a = 1) => (
-            <div className="card" key={(a += a)}>
+          {movieList.map((card) => (
+            <div className="card" key={card.id}>
               <img
                 src={
                   card.backdrop_path

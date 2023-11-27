@@ -8,13 +8,18 @@ export default class ApiService {
     },
   }
 
+  getOptions = {
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+    },
+  }
+
   postOptions = {
     method: 'POST',
     headers: {
       accept: 'application/json',
       'Content-Type': 'application/json;charset=utf-8',
-      Authorization:
-        'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1YWIyNDE4Zjg0NTRjMjNmOGE1ODZiZWM4ZjM3YzQ4OSIsInN1YiI6IjY1NGU3ZGYxZDRmZTA0MDBlMWFmYWM1ZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.8PZI2prQ11QEh6nc8vrepl9_o9L8kiE1YGgAWdSJ1bI',
     },
   }
 
@@ -46,8 +51,8 @@ export default class ApiService {
 
   async getRatedMovies(userId, selectedPage) {
     return await this.getResource(
-      `https://api.themoviedb.org/3/account/${userId}/rated/movies?language=en-US&page=${selectedPage}&sort_by=created_at.asc`,
-      this.options
+      `https://api.themoviedb.org/3/guest_session/${userId}/rated/movies?api_key=5ab2418f8454c23f8a586bec8f37c489&language=en-US&sort_by=created_at.asc&page=${selectedPage}`,
+      this.getOptions
     )
   }
 
@@ -62,8 +67,8 @@ export default class ApiService {
       body: value,
     }
 
-    return this.getResource(
-      `https://api.themoviedb.org/3/movie/${movieId}/rating?guest_session_id=${userId}`,
+    return await this.getResource(
+      `https://api.themoviedb.org/3/movie/${movieId}/rating?api_key=5ab2418f8454c23f8a586bec8f37c489&guest_session_id=${userId}`,
       this.postOptions
     )
   }
