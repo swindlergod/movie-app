@@ -1,1 +1,1 @@
-movie-rust-xi.vercel.app
+https://movie-rust-xi.vercel.app
